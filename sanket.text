@@ -1,0 +1,29 @@
+postgres=# insert into bus2 values('1','322',karandi);
+ERROR:  column "karandi" does not exist
+LINE 1: insert into bus2 values('1','322',karandi);
+                                          ^
+postgres=# insert into bus2 values('1','322','karandi');
+INSERT 0 1
+postgres=# insert into bus2 values('2','323','pune');
+INSERT 0 1
+postgres=# insert into bus2 values('3','423','mumbai');
+INSERT 0 1
+postgres=# insert into bus2 values('4','523','kohlapur');
+INSERT 0 1
+postgres=# insert into bus2 values('5','213','kendur');
+INSERT 0 1
+postgres=# select*bus2 ;
+ERROR:  syntax error at or near "bus2"
+LINE 1: select*bus2 ;
+               ^
+postgres=# select* from bus2;
+ bus_no | bcapacity | deport_name 
+--------+-----------+-------------
+      1 |       322 | karandi
+      2 |       323 | pune
+      3 |       423 | mumbai
+      4 |       523 | kohlapur
+      5 |       213 | kendur
+(5 rows)
+
+
